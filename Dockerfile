@@ -1,5 +1,7 @@
 FROM node:lts-alpine
 
+RUN node -v
+
 RUN apk --update add tzdata \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
