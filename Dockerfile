@@ -7,6 +7,8 @@ RUN apk --update add tzdata \
 
 RUN apk --no-cache add --virtual native-deps \
     g++ gcc libgcc libstdc++ linux-headers autoconf automake make nasm python git yarn
+    
+RUN npm config set unsafe-perm true
 
 RUN npm install npm@latest -g
 
